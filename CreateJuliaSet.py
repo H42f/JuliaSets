@@ -74,7 +74,8 @@ if __name__ == "__main__":
     print(binary_file, csv_file)
     if not os.path.isfile(binary_file):
         run("touch {}".format(binary_file), shell=True)
-    run("touch {}".format(csv_file), shell=True)
+    if not os.path.isfile(csv_file):
+        run("touch {}".format(csv_file), shell=True)
 
     # call C++ function to perform the necessary calculations
     command = "./src/Deg{pow}/JuliaSet{pow} {re} {im} {res}".format(re=real, im=imaginary, pow=power, res=resolution) \
