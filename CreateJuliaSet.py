@@ -18,24 +18,24 @@ if __name__ == "__main__":
         quit(1)
     resolution = sys.argv[4]
     if resolution == "poor":
-        xres = 100
-        yres = 100
+        xres = 400
+        yres = 400
         resolution = 0
     elif resolution == "low":
-        xres = 500
-        yres = 500
+        xres = 2000
+        yres = 2000
         resolution = 1
     elif resolution == "medium":
-        xres = 1000
-        yres = 1000
+        xres = 4000
+        yres = 4000
         resolution = 2
     elif resolution == "high":
-        xres = 5000
-        yres = 5000
+        xres = 20000
+        yres = 20000
         resolution = 3
     elif resolution == "best":
-        xres = 10000
-        yres = 10000
+        xres = 40000
+        yres = 40000
         resolution = 4
     elif resolution == "720p":
         xres = 1280
