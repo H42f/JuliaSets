@@ -36,7 +36,7 @@ The 'CreateJuliaSet.py' script takes four command line arguments:
     - 8K        ->       7680  by  4320  pixels  (16:9)
     - MacBook   ->       2560  by  1664  pixels  (20:13)
 
-    Make sure to remember escaping whitespaces if your shell would otherwise interpret them as and argument separator!
+    Make sure to remember escaping whitespaces if your shell would otherwise interpret them as an argument separator!
     
 While using the project, you might observe two files being created, one of them being only temporary. The first one is a binary file in which the results of the calculations are stored such that they won't have to be calculated again when you wish to plot them again, maybe because you'd like to try a different colormap and you are rerunning the python script. Or you choose a high resolution option and can't finish the calculations in a single setting. In this case, no data will be lost upon interrupting the script and the process can be continued at any time with the same command. The binaries can be deleted at any time without any consequences on the program, safe for the loss of data. The second file is a .csv file C++ creates to communicate with the Python script. After successful rendering of the final image, it will be deleted automatically.
 
