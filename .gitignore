@@ -1,5 +1,6 @@
-.bin
-.png
-.csv
-.idea
-./tests
+*.bin
+*.png
+*.csv
+.idea/
+/tests/
+.DS_Store
