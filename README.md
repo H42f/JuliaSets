@@ -4,7 +4,9 @@
 ## About
 
 This project was created as a playground for anyone who takes pleasure in the beauty of fractals.
+
 It was written in C++ and Python with the intention of a user calling CreateJuliaSet.py with corresponding command line arguments to have their fractal of choice rendered in ./plots. For performance reasons, 'CreateJuliaSet.py' will then call a C++ function stored in ./src for the necessary calculations — after all, the true beauty of a fractal remains obscured until you explore the infinite features of its self-similarity and the default choices for resoltions follow accordingly, as you will see below.
+
 Currently, the Python interface supports generating functions of the form f(z) = z^n + c, c ∈ {2, 3, 4}. For these, C++ programs are provided in which the corresponding functions are inlined for additional execution speed. They are found in ./src/Degn. Other functions can easily be implemented by using the code template ./src/JuliaSet.cpp, see section 'Experimental features'.
 
 
@@ -33,8 +35,11 @@ The 'CreateJuliaSet.py' script takes four command line arguments:
     - 4K        ->       3840  by  2160  pixels  (16:9)
     - 8K        ->       7680  by  4320  pixels  (16:9)
     - MacBook   ->       2560  by  1664  pixels  (20:13)
+
     Make sure to remember escaping whitespaces if your shell would otherwise interpret them as and argument separator!
+    
 While using the project, you might observe two files being created, one of them being only temporary. The first one is a binary file in which the results of the calculations are stored such that they won't have to be calculated again when you wish to plot them again, maybe because you'd like to try a different colormap and you are rerunning the python script. Or you choose a high resolution option and can't finish the calculations in a single setting. In this case, no data will be lost upon interrupting the script and the process can be continued at any time with the same command. The binaries can be deleted at any time without any consequences on the program, safe for the loss of data. The second file is a .csv file C++ creates to communicate with the Python script. After successful rendering of the final image, it will be deleted automatically.
+
 If you choose the 'best', please make sure to have a sufficient amount of RAM to render 12.8 GB of data. You may want to delete the binaries afterward to save storage. Also, be aware that as long as multithreading is not yet supported by the program (will be added soon and this section will disappear), the entire process may take up several hours (but as seen before, you can pause it at any time and also, you can of course use your pc otherwise during that period of time).
 
 ## Experimental features
